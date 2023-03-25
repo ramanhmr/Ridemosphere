@@ -1,12 +1,14 @@
 package com.ramanhmr.ridemosphere
 
-import org.junit.Assert.assertTrue
+import com.ramanhmr.ridemosphere.datasource.WeatherRepository
+import com.ramanhmr.ridemosphere.datasource.WeatherSource
 import org.junit.Test
 
 class Tests {
 
     @Test
-    fun when_open_get_ride_weather_info() {
-        assertTrue(false)
+    fun get_weather_from_weather_source() {
+        val weatherSource: WeatherSource = WeatherRepository()
+        weatherSource.getWeather()
     }
 }

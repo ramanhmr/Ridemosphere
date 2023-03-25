@@ -22,6 +22,11 @@ class DataFlowTests {
     }
 
     @Test
+    fun get_weather_flow_from_weather_source() {
+        weatherSource.getWeatherFlow()
+    }
+
+    @Test
     fun showing_weather_on_screen() {
         val weather = weatherSource.getWeather()
         val weatherScreen: ShowWeatherScreen = WeatherScreen()

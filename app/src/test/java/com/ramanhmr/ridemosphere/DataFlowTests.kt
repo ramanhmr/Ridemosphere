@@ -32,4 +32,11 @@ class DataFlowTests {
         val weatherScreen: ShowWeatherScreen = WeatherScreen()
         weatherScreen.showWeather(weather)
     }
+
+    @Test
+    fun setting_weather_flow_on_screen() {
+        val weatherFlow = weatherSource.getWeatherFlow()
+        val weatherScreen: ShowWeatherScreen = WeatherScreen()
+        weatherScreen.setWeatherFlow(weatherFlow)
+    }
 }

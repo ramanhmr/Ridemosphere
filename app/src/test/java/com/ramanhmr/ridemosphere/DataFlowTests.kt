@@ -3,7 +3,6 @@ package com.ramanhmr.ridemosphere
 import com.ramanhmr.ridemosphere.datasource.WeatherRepository
 import com.ramanhmr.ridemosphere.datasource.WeatherSource
 import com.ramanhmr.ridemosphere.ui.ShowWeatherScreen
-import com.ramanhmr.ridemosphere.ui.screens.WeatherScreen
 import org.junit.Before
 import org.junit.Test
 
@@ -29,14 +28,14 @@ class DataFlowTests {
     @Test
     fun showing_weather_on_screen() {
         val weather = weatherSource.getWeather()
-        val weatherScreen: ShowWeatherScreen = WeatherScreen()
+        val weatherScreen: ShowWeatherScreen = MainActivity()
         weatherScreen.showWeather(weather)
     }
 
     @Test
     fun setting_weather_flow_on_screen() {
         val weatherFlow = weatherSource.getWeatherFlow()
-        val weatherScreen: ShowWeatherScreen = WeatherScreen()
+        val weatherScreen: ShowWeatherScreen = MainActivity()
         weatherScreen.setWeatherFlow(weatherFlow)
     }
 }

@@ -10,9 +10,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.ramanhmr.ridemosphere.model.Weather
+import com.ramanhmr.ridemosphere.ui.ShowWeatherScreen
 import com.ramanhmr.ridemosphere.ui.theme.RidemosphereTheme
+import kotlinx.coroutines.flow.Flow
 
-class MainActivity : ComponentActivity() {
+class MainActivity : ComponentActivity(), ShowWeatherScreen {
+    override fun showWeather(weather: Weather) = Unit
+    override fun setWeatherFlow(weatherFlow: Flow<Weather>) = Unit
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
